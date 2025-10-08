@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+
+
+@font-face{
+    font-family: poppins-regular;
+    src: url("../src/fonts/SFPRODISPLAYREGULAR.OTF")
+}
+
+@font-face{
+    font-family: poppins-bold;
+    src: url("../src/fonts/SFPRODISPLAYBOLD.OTF")
+}
+
+@font-face{
+    font-family: poppins-ExtraBold;
+    src: url("../src/fonts/SFPRODISPLAYMEDIUM.OTF")
+}
+
+@import "tailwindcss";
+
+@theme{
+    --font-poppins:poppins-regular,"sans-serif";
+    --font-poppins-bold:poppins-bold, "sans-serif";
+    --font-poppins-extraBold:poppins-extraBold,"sans-serif"
+}
+
