@@ -1,143 +1,65 @@
-import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import Marquee from "react-fast-marquee";
 
 const RecentVideos = () => {
   const videos = [
-    "https://ik.imagekit.io/vzualvibe/Home%20videos/reel2.mp4?updatedAt=1759686414939",
-    "https://ik.imagekit.io/vzualvibe/Home%20videos/lasya3.mp4?updatedAt=1759811199963",
-    "https://ik.imagekit.io/vzualvibe/Home%20videos/reel%201.mp4?updatedAt=1759811192420",
-    "https://ik.imagekit.io/vzualvibe/Home%20videos/oodle%20sample%20vid.mp4?updatedAt=1759811191128",
+    "https://imagekit.io/player/embed/moodyplayer/sample%201.2.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1760188192533&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fmoodyplayer%2Fsample%25201.2.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1760188192533&updatedAt=1760188192533",
+
+    "https://imagekit.io/player/embed/moodyplayer/json.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1760188423415&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fmoodyplayer%2Fjson.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1760188423415&updatedAt=1760188423415",
+
+    "https://imagekit.io/player/embed/moodyplayer/oodle%20sample%20vid.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1760188629247&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fmoodyplayer%2Foodle%2520sample%2520vid.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1760188629247&updatedAt=1760188629247",
+
+    "https://imagekit.io/player/embed/moodyplayer/reel%201.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1760188017938&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fmoodyplayer%2Freel%25201.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1760188017938&updatedAt=1760188017938",
+
+    "https://imagekit.io/player/embed/moodyplayer/reel%201.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1760188017938&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fmoodyplayer%2Freel%25201.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1760188017938&updatedAt=1760188017938",
+
+    "https://imagekit.io/player/embed/moodyplayer/reel%201.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1760188017938&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fmoodyplayer%2Freel%25201.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1760188017938&updatedAt=1760188017938",
   ];
-
-  const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0);
-
-  const handlePrev = () => {
-    setDirection(-1);
-    setCurrent((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setDirection(1);
-    setCurrent((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
-  };
-
-  const getVideo = (offset) => {
-    const newIndex = (current + offset + videos.length) % videos.length;
-    return videos[newIndex];
-  };
-
-  const variants = {
-    enter: (dir) => ({
-      x: dir > 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (dir) => ({
-      x: dir > 0 ? -1000 : 1000,
-      opacity: 0,
-    }),
-  };
 
   return (
     <div className="bg-black relative py-10 overflow-hidden">
-      <h1 className="text-3xl text-white font-bold text-center mb-7 md:text-5xl">
+      <h1 className="text-3xl text-white font-poppins-bold text-center mb-7 md:text-5xl">
         Our Recent Works
       </h1>
 
-      <div className="flex justify-center items-center relative">
-        <button
-          onClick={handlePrev}
-          className="absolute left-1 md:left-10 text-white bg-white/20 hover:bg-white/40 p-2 md:p-4 rounded-full z-10 transition-all duration-300"
-        >
-          <ChevronLeft size={30} />
-        </button>
-
-        <div className="flex items-center justify-center gap-4 md:gap-8 w-full max-w-7xl px-4">
-          {/* Left */}
-          <div className="w-[0vw] md:w-[20vw] h-[45vh] md:h-[70vh] opacity-40 scale-90 relative overflow-hidden rounded-2xl">
-            <AnimatePresence initial={false} custom={direction}>
-              <motion.video
-                key={`left-${current}`}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "", stiffness: 0, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                src={getVideo(-1)}
-                loop
-                muted
-                playsInline
-                preload="auto"
-                className="w-full h-full object-cover absolute inset-0"
-              />
-            </AnimatePresence>
-          </div>
-
-          {/* Center */}
-          <div className="w-[70vw] md:w-[25vw] h-[60vh] md:h-[75vh] relative overflow-hidden rounded-2xl shadow-[0_0_30px_rgba(255,255,255,0.2)]">
-            <AnimatePresence initial={false} custom={direction}>
-              <motion.video
-                key={`center-${current}`}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                src={getVideo(0)}
+      <div className="relative w-[85vw]   pt-5 md:w-[85vw] h-[40vh] md:h-[80vh] mx-auto overflow-hidden rounded-2xl">
+        <Marquee pauseOnHover={true} speed={80} gradient={false}>
+          {videos.map((video, index) => (
+            <div
+              key={index}
+              className="w-[47vw] md:w-[18vw] h-[37vh] md:h-[70vh]  flex-shrink-0 mx-2 overflow-hidden rounded-xl"
+            >
+              <iframe className="w-full h-full object-cover" src={video} title="ImageKit video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"> </iframe>
+              {/* <video
+                src={video}
                 autoPlay
                 loop
                 muted
                 playsInline
                 preload="auto"
-                className="w-full h-full object-cover absolute inset-0"
-              />
-            </AnimatePresence>
-          </div>
+                className="w-full h-full object-cover"
+              /> */}
+            </div>
+          ))}
+        </Marquee>
 
-          {/* Right */}
-          <div className="w-[0vw] md:w-[20vw] h-[45vh] md:h-[70vh] opacity-40 scale-90 relative overflow-hidden rounded-2xl">
-            <AnimatePresence initial={false} custom={direction}>
-              <motion.video
-                key={`right-${current}`}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "", stiffness: 0, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                src={getVideo(1)}
-                loop
-                muted
-                playsInline
-                preload="auto"
-                className="w-full h-full object-cover absolute inset-0"
-              />
-            </AnimatePresence>
-          </div>
-        </div>
+        {/* Left smooth fade */}
+        <div
+          className="pointer-events-none absolute -left-5 top-0 h-full w-[20%] z-10"
+          style={{
+            background: "linear-gradient(to right, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 90%)",
+            filter: "blur(10px)",
+          }}
+        ></div>
 
-        <button
-          onClick={handleNext}
-          className="absolute right-1 md:right-10 text-white bg-white/20 hover:bg-white/40 p-2 md:p-4 rounded-full z-10 transition-all duration-300"
-        >
-          <ChevronRight size={30} />
-        </button>
+        {/* Right smooth fade */}
+        <div
+          className="pointer-events-none absolute -right-4 top-0 h-full w-[20%] z-10"
+          style={{
+            background: "linear-gradient(to left, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 90%)",
+            filter: "blur(10px)",
+          }}
+        ></div>
       </div>
     </div>
   );

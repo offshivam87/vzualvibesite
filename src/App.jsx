@@ -3,6 +3,11 @@ import Navbar from './Navbar/Navbar'
 import Home from './HomeComponents/Home'
 import RecentVideos from './HomeComponents/RecentVideos'
 import Test from './HomeComponents/Test'
+import ClientResults from './HomeComponents/ClientResults'
+import How from './HomeComponents/How'
+import Brands from './HomeComponents/Brands'
+import Testimonial from './HomeComponents/Testimonial'
+import ContactForm from './HomeComponents/ContactForm'
 
 const App = () => {
   return (
@@ -11,7 +16,11 @@ const App = () => {
       <Navbar/>
       <Home/>
       <RecentVideos/>
-      {/* <Test/> */}
+      <ClientResults/>
+      <How/>
+      <Brands/>
+      <Testimonial/>
+      <ContactForm/>
       </div>
     
       
