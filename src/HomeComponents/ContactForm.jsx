@@ -35,7 +35,7 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     try{
-    const res = await axios.post("https://vzualvibesite.vercel.app/form", data)
+    const res = await axios.post("/api/form", data)
     alert(res.data.message);
     reset()
   }catch(err){
