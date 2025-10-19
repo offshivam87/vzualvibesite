@@ -22,9 +22,7 @@ export default async function handler(req, res) {
     const { name, email, videoType, budgetRange, vision } = req.body;
 
     // Validation
-    if (!name || !email) {
-      return res.status(400).json({ error: 'Name and email required' });
-    }
+
 
     // Save to database
     const formEntry = await FormModel.create({
@@ -47,7 +45,7 @@ export default async function handler(req, res) {
     console.error('Error:', error);
     return res.status(500).json({
       error: 'Failed to save form',
-      details: error.message
+      
     });
   }
 }
