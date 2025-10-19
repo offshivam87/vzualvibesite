@@ -1,4 +1,4 @@
-import dbConnect from '../lib/mongoose';
+import dbConnect from '../backend/src/db/db';
 import FormModel from '../backend/src/models/form.model';
 
 export default async function handler(req, res) {
