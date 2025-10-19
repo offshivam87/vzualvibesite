@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
     <header className=" top-8 fixed left-1/2 -translate-x-1/2  z-50 mx-auto w-[95%] md:w-[50vw] h-[8vh] md:h-[8vh] rounded-[50px] backdrop-blur-md bg-white/20 border border-[#FFD700] shadow-lg">
       <nav className="flex items-center justify-between px-4 py-1.5">
         {/* Left: Brand */}
-        <a href="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
         <div className="logo w-[14vw] h-[6vh] md:w-[5vw]  rounded-[60px] my-auto ">
           <img
             src="https://ik.imagekit.io/vzualvibe/freepik__background__43968.png?updatedAt=1759289482917"
@@ -18,19 +19,19 @@ const Navbar = () => {
           />
           </div>
           <span className="text-white font-poppins">Vzualvibe</span>
-        </a>
+        </Link>
 
         {/* Right: Desktop links */}
         <div className="hidden md:flex items-center gap-6">
-          <a href="#page1" className="text-white/90 font-poppins hover:text-white transition">Home</a>
-          <a href="#page2" className="text-white/90 font-poppins hover:text-white transition">Portfolio</a>
-          <a href="#page3" className="text-white/90 font-poppins hover:text-white transition">About us</a>
-          <a
-            href="tel:+911234567890"
-            className="inline-flex items-center rounded-lg bg-[#FBC740] px-4 py-2 font-poppins-bold text-gray-800 hover:text-white  transition"
+          <Link to="/" className="text-white/90 font-poppins hover:text-white transition">Home</Link>
+          <Link to="/portfolio" className="text-white/90 font-poppins hover:text-white transition">Portfolio</Link>
+          <Link to="/about" className="text-white/90 font-poppins hover:text-white transition">About us</Link>
+          <Link
+            to="tel:+911234567890"
+            className="inline-flex items-center rounded-lg bg-amber-300 px-4 py-2 font-poppins-bold text-gray-800 hover:text-white  transition"
           >
             Quick Call
-          </a>
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -66,16 +67,16 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col my-2 gap-3 text-center pt-2">
-          <a onClick={() => setOpen(false)} href="#page1" className="text-white/90 font-poppins hover:text-white transition">Home</a>
-          <a onClick={() => setOpen(false)} href="#page2" className="text-white/90 font-poppins hover:text-white transition">Portfolio</a>
-          <a onClick={() => setOpen(false)} href="#page3" className="text-white/90 font-poppins hover:text-white transition">About us</a>
-          <a
+          <Link onClick={() => setOpen(false)} to="/" className="text-white/90 font-poppins hover:text-white transition">Home</Link>
+          <Link onClick={() => setOpen(false)} to="/portfolio" className="text-white/90 font-poppins hover:text-white transition">Portfolio</Link>
+          <Link onClick={() => setOpen(false)} to="/about" className="text-white/90 font-poppins hover:text-white transition">About us</Link>
+          <Link
             onClick={() => setOpen(false)}
-            href="tel:+911234567890"
+            to="tel:+911234567890"
             className="inline-flex w-full items-center justify-center rounded-lg bg-[#FBC740] px-4 py-2 text-white  transition"
           >
             Quick Call
-          </a>
+          </Link>
         </div>
       </div>
     </header>

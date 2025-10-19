@@ -2,7 +2,7 @@ import React from 'react'
 
 const Testimonial = () => {
   return (
-    <div className='bg-black'>
+    <div className='bg-black pb-10 md:pb-0'>
       <h1 className="text-4xl text-white font-poppins text-center md:mb-0 md:text-6xl">
         Clients Testimonials
       </h1>

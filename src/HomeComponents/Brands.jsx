@@ -27,7 +27,7 @@ const Brands = () => {
             
             <div
               key={index}
-              className="w-[23vw]  md:w-[150px] md:h-[150px] h-[11vh]  flex-shrink-0  overflow-hidden rounded-[80px] md:rounded-full"
+              className="w-[23vw]  md:w-[150px] border-amber-300 border-3 md:h-[150px] h-[11vh]  flex-shrink-0  overflow-hidden rounded-[80px] md:rounded-full"
             >
 
               <img src={video} className='w-full h-full object-cover' alt="" />

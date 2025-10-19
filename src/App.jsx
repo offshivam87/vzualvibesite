@@ -1,29 +1,19 @@
 import React from 'react'
 import Navbar from './Navbar/Navbar'
 import Home from './HomeComponents/Home'
-import RecentVideos from './HomeComponents/RecentVideos'
-import Test from './HomeComponents/Test'
-import ClientResults from './HomeComponents/ClientResults'
-import How from './HomeComponents/How'
-import Brands from './HomeComponents/Brands'
-import Testimonial from './HomeComponents/Testimonial'
-import ContactForm from './HomeComponents/ContactForm'
+
+import Portfolio from './portfolio/Portfolio'
+import MainRoutes from './Route/MainRoutes'
+
 
 const App = () => {
   return (
-    <div className='bg-black w-full h-screen '>
-      <div>
-      <Navbar/>
-      <Home/>
-      <RecentVideos/>
-      <ClientResults/>
-      <How/>
-      <Brands/>
-      <Testimonial/>
-      <ContactForm/>
-      </div>
-    
+    <div className='bg-black  '>
       
+      <Navbar/>
+      <MainRoutes/>
+      
+     
     </div>
   )
 }

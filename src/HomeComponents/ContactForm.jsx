@@ -1,8 +1,11 @@
+import axios from 'axios';
+import { div } from 'motion/react-client';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const ContactForm = () => {
   const {
+    reset,
     register,
     handleSubmit,
     formState: { errors },
@@ -30,14 +33,25 @@ const ContactForm = () => {
   const budgetRange = watch('budgetRange');
   const videoType = watch('videoType');
 
-  const onSubmit = (data) => {
-    console.log('Form submitted:', data);
-    // Add your submission logic here
-    alert('Form submitted successfully!');
-  };
+  const onSubmit = async (data) => {
+    try{
+    const res = await axios.post("http://localhost:3000/form", data)
+    alert(res.data.message);
+    reset()
+  }catch(err){
+    console.error(err);
+      alert("Something went wrong!");
+
+  }
+}
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-10">
+    <div className='bg-black font-poppins'>
+      <h1 className="text-4xl text-white font-poppins-bold text-center  md:mb-10 md:text-5xl">
+                Tell us what you need
+            </h1>
+    <div className="h-[90vh] bg-black flex items-center justify-center px-10 md:pt-[8rem] md:pb-[8rem]">
+     
       <div className="w-full max-w-4xl">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           {/* Name and Email Fields */}
@@ -229,6 +243,7 @@ const ContactForm = () => {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 };
