@@ -13,6 +13,9 @@ app.post('/form', async(req,res)=>{
   const {name,email,videoType,budgetRange,vision}= req.body
   console.log(name,email,videoType,budgetRange,vision);
 
+
+  try{
+
   await formModel.create({
     name,email,videoType,budgetRange,vision
   })
@@ -22,5 +25,9 @@ app.post('/form', async(req,res)=>{
       message: "Form submitted successfully!",
       
     })
+  }catch(err){
+    console.log(err);
+    
+  }
 })
 module.exports = app
