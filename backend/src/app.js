@@ -9,7 +9,7 @@ app.use(cors())
 
 app.use(express.json())
 
-app.post('/form', async(req,res)=>{
+app.post('/api/form', async(req,res)=>{
   const {name,email,videoType,budgetRange,vision}= req.body
   console.log(name,email,videoType,budgetRange,vision);
 

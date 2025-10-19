@@ -1,9 +1,17 @@
 require('dotenv').config();
-const app = require('../backend/src/app'); // App import karo
+const app = require('../backend/src/app');
 const connectToDB = require('../backend/src/db/db');
 
-// Database connect karo
-connectToDB();
+let isConnected = false;
 
-// Export app as serverless function
-module.exports = app;
+module.exports = async (req, res) => {
+  // Database connection (reuse if already connected)
+  if (!isConnected) {
+    await connectToDB();
+    isConnected = true;
+    console.log('Database connected');
+  }
+
+  // Let Express handle the request
+  return app(req, res);
+};
