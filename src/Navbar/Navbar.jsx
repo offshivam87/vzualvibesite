@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-6">
           <Link to="/" className="text-white/90 font-poppins hover:text-white transition">Home</Link>
           <Link to="/portfolio" className="text-white/90 font-poppins hover:text-white transition">Portfolio</Link>
-          <Link to="/about" className="text-white/90 font-poppins hover:text-white transition">About us</Link>
+          <Link to="/aboutus" className="text-white/90 font-poppins hover:text-white transition">About us</Link>
           <Link
             to="tel:+918853106016"
             className="inline-flex items-center rounded-lg bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-600 px-4 py-2 font-poppins-bold text-gray-800 hover:text-white transition"
@@ -71,7 +71,7 @@ const Navbar = () => {
         <div className="flex flex-col my-2 gap-3 text-center pt-2">
           <Link onClick={() => setOpen(false)} to="/" className="text-white/90 font-poppins hover:text-white transition">Home</Link>
           <Link onClick={() => setOpen(false)} to="/portfolio" className="text-white/90 font-poppins hover:text-white transition">Portfolio</Link>
-          <Link onClick={() => setOpen(false)} to="/about" className="text-white/90 font-poppins hover:text-white transition">About us</Link>
+          <Link onClick={() => setOpen(false)} to="/aboutus" className="text-white/90 font-poppins hover:text-white transition">About us</Link>
           <Link
             onClick={() => setOpen(false)}
             to="tel:+918853106016"
