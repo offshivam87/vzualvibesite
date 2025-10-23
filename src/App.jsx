@@ -1,6 +1,7 @@
 
 import Navbar from './Navbar/Navbar'
 import MainRoutes from './Route/MainRoutes'
+import ScrollToTop from './scroll/ScrollToTop'
 
 
 
@@ -9,6 +10,7 @@ const App = () => {
     <div className='bg-black  '>
       
       <Navbar/>
+      <ScrollToTop/>
       <MainRoutes/>
       
      
