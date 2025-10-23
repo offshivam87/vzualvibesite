@@ -1,9 +1,7 @@
-import React from 'react'
-import Navbar from './Navbar/Navbar'
-import Home from './HomeComponents/Home'
 
-import Portfolio from './portfolio/Portfolio'
+import Navbar from './Navbar/Navbar'
 import MainRoutes from './Route/MainRoutes'
+
 
 
 const App = () => {

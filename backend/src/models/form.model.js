@@ -16,7 +16,7 @@ const formSchema = new mongoose.Schema({
   videoType: {
     type: String,
     required: [true, 'Video type is required'],
-    enum: ['Reel', 'YouTube', 'Commercial', 'Corporate', 'Other'], // optional — customize as per your form
+    enum: ['Ai Video', 'Motion graphics Video', 'Transitional Video', 'Talking Head Video', 'Fitness Video','Social Media Content Marketing','Other'], // optional — customize as per your form
   },
   budgetRange: {
     type: String,

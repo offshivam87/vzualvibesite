@@ -9,9 +9,10 @@ import Testimonial from '../HomeComponents/Testimonial'
 import ContactForm from '../HomeComponents/ContactForm'
 import Footer from '../HomeComponents/Footer'
 import Portfolio from '../portfolio/Portfolio'
+import AboutUs from './Aboutus'
 const Home = () => {
   return (
-    <div className=' md:pt-[25vh] pt-[18vh]'>
+    <div className=' md:pt-[25vh] overflow-y-hidden overflow-x-hidden pt-[18vh]'>
         <Heading/>
         <RecentVideos/>
       <ClientResults/>
@@ -20,7 +21,8 @@ const Home = () => {
       <Testimonial/>
       <ContactForm/>
      <Footer/>
-     <Portfolio/>
+     
+     
         
       
     </div>

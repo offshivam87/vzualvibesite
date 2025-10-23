@@ -5,18 +5,20 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-
-    
-    <header className=" top-8 fixed left-1/2 -translate-x-1/2  z-50 mx-auto w-[95%] md:w-[50vw] h-[8vh] md:h-[8vh] rounded-[50px] backdrop-blur-md bg-white/20 border border-[#FFD700] shadow-lg">
+    <header 
+      className={`top-8 fixed left-1/2 -translate-x-1/2 z-50 mx-auto w-[95%] md:w-[50vw] rounded-[50px] backdrop-blur-md bg-white/20 border border-[#FFD700] shadow-lg transition-all duration-300 ${
+        open ? "h-auto" : "h-[8vh]"
+      }`}
+    >
       <nav className="flex items-center justify-between px-4 py-1.5">
         {/* Left: Brand */}
         <Link to="/" className="flex items-center gap-2">
-        <div className="logo w-[14vw] h-[6vh] md:w-[5vw]  rounded-[60px] my-auto ">
-          <img
-            src="https://ik.imagekit.io/vzualvibe/freepik__background__43968.png?updatedAt=1759289482917"
-            alt="Brand"
-            className="w-full h-full object-cover "
-          />
+          <div className="logo w-[14vw] h-[6vh] md:w-[5vw] rounded-[60px] my-auto">
+            <img
+              src="https://ik.imagekit.io/vzualvibe/freepik__background__43968.png?updatedAt=1759289482917"
+              alt="Brand"
+              className="w-full h-full object-cover"
+            />
           </div>
           <span className="text-white font-poppins">Vzualvibe</span>
         </Link>
@@ -27,8 +29,8 @@ const Navbar = () => {
           <Link to="/portfolio" className="text-white/90 font-poppins hover:text-white transition">Portfolio</Link>
           <Link to="/about" className="text-white/90 font-poppins hover:text-white transition">About us</Link>
           <Link
-            to="tel:+911234567890"
-            className="inline-flex items-center rounded-lg bg-amber-300 px-4 py-2 font-poppins-bold text-gray-800 hover:text-white  transition"
+            to="tel:+918853106016"
+            className="inline-flex items-center rounded-lg bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-600 px-4 py-2 font-poppins-bold text-gray-800 hover:text-white transition"
           >
             Quick Call
           </Link>
@@ -62,8 +64,8 @@ const Navbar = () => {
 
       {/* Mobile dropdown panel */}
       <div
-        className={`md:hidden px-4 pb-3 transition-[max-height,opacity] duration-300 overflow-hidden ${
-          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden px-4 transition-all duration-300 ease-in-out ${
+          open ? "max-h-96 opacity-100 pb-3" : "max-h-0 opacity-0"
         }`}
       >
         <div className="flex flex-col my-2 gap-3 text-center pt-2">
@@ -72,8 +74,8 @@ const Navbar = () => {
           <Link onClick={() => setOpen(false)} to="/about" className="text-white/90 font-poppins hover:text-white transition">About us</Link>
           <Link
             onClick={() => setOpen(false)}
-            to="tel:+911234567890"
-            className="inline-flex w-full items-center justify-center rounded-lg bg-[#FBC740] px-4 py-2 text-white  transition"
+            to="tel:+918853106016"
+            className="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-600 px-4 py-2 text-gray-800 hover:text-white transition"
           >
             Quick Call
           </Link>
