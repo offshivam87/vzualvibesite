@@ -72,7 +72,7 @@ const AboutUs = () => {
     ];
 
     return (
-        <div className="min-h-screen md:pt-[2rem] pt-[5rem] font-poppins overflow-x-hidden bg-black text-white">
+        <div className="min-h-screen  md:pt-[2rem] pt-[5rem] font-poppins overflow-x-hidden bg-black text-white">
             {/* Hero Section */}
             <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-black"></div>

@@ -112,7 +112,10 @@ const Footer = () => {
                             >
                                 <FaPhone className="text-[#FFD700] rotate-90 flex-shrink-0" />
                                 <Link to="tel:+918853106016" className="hover:text-[#FFD700] transition-colors duration-300">
-                                    +91 8853106016 | +91 9555536556
+                                    +91 8853106016
+                                </Link>
+                                <Link to="tel:+919555536556" className="hover:text-[#FFD700] transition-colors duration-300">
+                                    | +91 9555536556
                                 </Link>
                             </motion.li>
                         </ul>
