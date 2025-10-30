@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 
 const RecentVideos = () => {
   const videos = [
-    "https://imagekit.io/player/embed/vzualvibemedia/ai%20videos/Video-558.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761039703660&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Fai%2520videos%2FVideo-558.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761039703660&updatedAt=1761039703660",
+    // "https://imagekit.io/player/embed/vzualvibemedia/ai%20videos/Video-558.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761039703660&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Fai%2520videos%2FVideo-558.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761039703660&updatedAt=1761039703660",
 
-     "https://imagekit.io/player/embed/vzualvibemedia/transitional/SnapInsta.to_AQNfw6sQaNkHBjOGc2ysE0lo4ymeNMSPUpWuQfkKpKZVrFQNwWW-_cTg2IKFF1Qm-vB-gzIw6yITfmld_bx5PiDJOTjPn6E52LGiGw0.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761036984122&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Ftransitional%2FSnapInsta.to_AQNfw6sQaNkHBjOGc2ysE0lo4ymeNMSPUpWuQfkKpKZVrFQNwWW-_cTg2IKFF1Qm-vB-gzIw6yITfmld_bx5PiDJOTjPn6E52LGiGw0.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761036984122&updatedAt=1761036984122",
+    //  "https://imagekit.io/player/embed/vzualvibemedia/transitional/SnapInsta.to_AQNfw6sQaNkHBjOGc2ysE0lo4ymeNMSPUpWuQfkKpKZVrFQNwWW-_cTg2IKFF1Qm-vB-gzIw6yITfmld_bx5PiDJOTjPn6E52LGiGw0.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761036984122&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Ftransitional%2FSnapInsta.to_AQNfw6sQaNkHBjOGc2ysE0lo4ymeNMSPUpWuQfkKpKZVrFQNwWW-_cTg2IKFF1Qm-vB-gzIw6yITfmld_bx5PiDJOTjPn6E52LGiGw0.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761036984122&updatedAt=1761036984122",
 
      "https://imagekit.io/player/embed/vzual1/motion%20graphic/lasya3.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761060042452&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzual1%2Fmotion%2520graphic%2Flasya3.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761060042452&updatedAt=1761060042452",
 
@@ -14,9 +14,9 @@ const RecentVideos = () => {
 
      "https://imagekit.io/player/embed/vv2/gymnasium%20video%20board(1).mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761069098464&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvv2%2Fgymnasium%2520video%2520board%281%29.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761069098464&updatedAt=1761069098464",
 
-     "https://imagekit.io/player/embed/vzualvibemedia/ai%20videos/Video-343.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761039705546&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Fai%2520videos%2FVideo-343.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761039705546&updatedAt=1761039705546",
+    //  "https://imagekit.io/player/embed/vzualvibemedia/ai%20videos/Video-343.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761039705546&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Fai%2520videos%2FVideo-343.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761039705546&updatedAt=1761039705546",
 
-     "https://imagekit.io/player/embed/vzualvibemedia/transitional/SnapInsta.to_AQPoTHd9E8-_PvrSb_WF9iI-uTDqedTmfMmkbBrFIohCWBtkhj6n22do0YbMGOj8lACBMFAwuR3H1tQi29spkS5P-N0j7FnJRt3MPOE.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761036983729&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Ftransitional%2FSnapInsta.to_AQPoTHd9E8-_PvrSb_WF9iI-uTDqedTmfMmkbBrFIohCWBtkhj6n22do0YbMGOj8lACBMFAwuR3H1tQi29spkS5P-N0j7FnJRt3MPOE.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761036983729&updatedAt=1761036983729",
+    //  "https://imagekit.io/player/embed/vzualvibemedia/transitional/SnapInsta.to_AQPoTHd9E8-_PvrSb_WF9iI-uTDqedTmfMmkbBrFIohCWBtkhj6n22do0YbMGOj8lACBMFAwuR3H1tQi29spkS5P-N0j7FnJRt3MPOE.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761036983729&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Ftransitional%2FSnapInsta.to_AQPoTHd9E8-_PvrSb_WF9iI-uTDqedTmfMmkbBrFIohCWBtkhj6n22do0YbMGOj8lACBMFAwuR3H1tQi29spkS5P-N0j7FnJRt3MPOE.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761036983729&updatedAt=1761036983729",
 
      "https://imagekit.io/player/embed/vzual1/motion%20graphic/global%20cell%20motion%20reel.mp4?controls=false&autoplay=true&loop=true&background=%23000000&updatedAt=1761059354103&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzual1%2Fmotion%2520graphic%2Fglobal%2520cell%2520motion%2520reel.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761059354103&updatedAt=1761059354103",
 

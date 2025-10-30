@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import {motion} from "framer-motion"
+import { motion } from 'framer-motion';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -15,18 +15,15 @@ const Section2 = () => {
   const nextRef = useRef(null);
 
   const videos = [
-    "https://imagekit.io/player/embed/vzualvibemedia/transitional/SnapInsta.to_AQNfw6sQaNkHBjOGc2ysE0lo4ymeNMSPUpWuQfkKpKZVrFQNwWW-_cTg2IKFF1Qm-vB-gzIw6yITfmld_bx5PiDJOTjPn6E52LGiGw0.mp4?controls=true&autoplay=false&loop=false&background=%23000000&updatedAt=1761036984122&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Ftransitional%2FSnapInsta.to_AQNfw6sQaNkHBjOGc2ysE0lo4ymeNMSPUpWuQfkKpKZVrFQNwWW-_cTg2IKFF1Qm-vB-gzIw6yITfmld_bx5PiDJOTjPn6E52LGiGw0.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761036984122&updatedAt=1761036984122",
+    "https://res.cloudinary.com/diryjrxdy/video/upload/v1761850649/SnapInsta.to_AQOUJhEMuCrVQI2FGE4tNVhUEHjpAgXeJNjC2mmo-06nzh_eDoFHJDfzE8mChpdAQF64b3GVWYAJkac4Ybo16c75BAwZgzW3WZSiVq8_epr1c3.mp4",
 
-   "https://imagekit.io/player/embed/vzualvibemedia/transitional/SnapInsta.to_AQPoTHd9E8-_PvrSb_WF9iI-uTDqedTmfMmkbBrFIohCWBtkhj6n22do0YbMGOj8lACBMFAwuR3H1tQi29spkS5P-N0j7FnJRt3MPOE.mp4?controls=true&autoplay=false&loop=false&background=%23000000&updatedAt=1761036983729&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Ftransitional%2FSnapInsta.to_AQPoTHd9E8-_PvrSb_WF9iI-uTDqedTmfMmkbBrFIohCWBtkhj6n22do0YbMGOj8lACBMFAwuR3H1tQi29spkS5P-N0j7FnJRt3MPOE.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761036983729&updatedAt=1761036983729" ,
+    "https://res.cloudinary.com/diryjrxdy/video/upload/v1761850652/SnapInsta.to_AQNfw6sQaNkHBjOGc2ysE0lo4ymeNMSPUpWuQfkKpKZVrFQNwWW-_cTg2IKFF1Qm-vB-gzIw6yITfmld_bx5PiDJOTjPn6E52LGiGw0_aw3mz4.mp4",
 
-   "https://imagekit.io/player/embed/vzualvibemedia/transitional/eventra.mp4?controls=true&autoplay=false&loop=false&background=%23000000&updatedAt=1761036707774&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Ftransitional%2Feventra.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761036707774&updatedAt=1761036707774",
+    "https://res.cloudinary.com/diryjrxdy/video/upload/v1761850647/SnapInsta.to_AQPoTHd9E8-_PvrSb_WF9iI-uTDqedTmfMmkbBrFIohCWBtkhj6n22do0YbMGOj8lACBMFAwuR3H1tQi29spkS5P-N0j7FnJRt3MPOE_xtvo1z.mp4",
+    
+    "https://res.cloudinary.com/diryjrxdy/video/upload/v1761850667/SnapInsta.to_AQPW8zliBYqsJvNXLP2sVc7DjHv863QcV8WA_o5bOHlz_aYyYW3sLit2ZrfOmGKHX9vIgKJetX0IFxA4jaRKfWahV3xWe9PLEOB3mT0_uof4za.mp4",
 
-
-   "https://imagekit.io/player/embed/vzualvibemedia/transitional/t2.mp4?controls=true&autoplay=false&loop=false&background=%23000000&updatedAt=1761036333406&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Ftransitional%2Ft2.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761036333406&updatedAt=1761036333406",
-   
-   "https://imagekit.io/player/embed/vzualvibemedia/transitional/t1.mp4?controls=true&autoplay=false&loop=false&background=%23000000&updatedAt=1761036314076&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Ftransitional%2Ft1.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761036314076&updatedAt=1761036314076",
-
-   "https://imagekit.io/player/embed/vzualvibemedia/transitional/4.mp4?controls=true&autoplay=false&loop=false&background=%23000000&updatedAt=1761039127824&thumbnail=https%3A%2F%2Fik.imagekit.io%2Fvzualvibemedia%2Ftransitional%2F4.mp4%2Fik-thumbnail.jpg%3FupdatedAt%3D1761039127824&updatedAt=1761039127824"
+    "https://res.cloudinary.com/diryjrxdy/video/upload/v1761850937/eventra_qxvvgb.mp4",
 
 
   ];
@@ -37,7 +34,7 @@ const Section2 = () => {
       const params = swiperInstance.params;
       params.navigation.prevEl = prevRef.current;
       params.navigation.nextEl = nextRef.current;
-      
+
       // Navigation ko re-initialize karo
       swiperInstance.navigation.destroy();
       swiperInstance.navigation.init();
@@ -46,35 +43,36 @@ const Section2 = () => {
   }, [swiperInstance]);
 
   return (
-    <div className="w-full  bg-black ">
+    <div className="w-full  bg-black py-8">
       <motion.p
         initial={{ opacity: 0, filter: "blur(10px)", y: -30 }}
         whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className='text-white text-center  md:text-6xl text-4xl font-poppins-bold mb-15'
+        className='text-white text-center mt-[7rem] md:text-6xl text-4xl font-poppins-bold mb-10'
       >
-        Transitional Edits
+        Ai Videos
       </motion.p>
+
       <div className="mx-auto max-w-7xl px-4">
         <div className="relative">
           {/* Custom Previous Button */}
-         <button
-                     ref={prevRef}
-                     className="absolute left-2 md:-left-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-20 md:h-20 rounded-full bg-black text-white grid place-items-center shadow-lg hover:scale-105 hover:bg-gray-800 transition-all active:scale-95"
-                     aria-label="Previous"
-                   >
-                     <ChevronLeft className="w-6 md:w-10 md:h-10 h-6" />
-                   </button>
+          <button
+            ref={prevRef}
+            className="absolute left-2 md:-left-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-20 md:h-20 rounded-full bg-black text-white grid place-items-center shadow-lg hover:scale-105 hover:bg-gray-800 transition-all active:scale-95"
+            aria-label="Previous"
+          >
+            <ChevronLeft className="w-6 md:w-10 md:h-10 h-6" />
+          </button>
 
           {/* Custom Next Button */}
           <button
-                      ref={nextRef}
-                      className="absolute right-2 md:-right-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-20 md:h-20 rounded-full bg-black text-white grid place-items-center shadow-lg hover:scale-105 hover:bg-gray-800 transition-all active:scale-95"
-                      aria-label="Next"
-                    >
-                      <ChevronRight className="w-6 md:w-10 md:h-10 h-6" />
-                    </button>
+            ref={nextRef}
+            className="absolute right-2 md:-right-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-20 md:h-20 rounded-full bg-black text-white grid place-items-center shadow-lg hover:scale-105 hover:bg-gray-800 transition-all active:scale-95"
+            aria-label="Next"
+          >
+            <ChevronRight className="w-6 md:w-10 md:h-10 h-6" />
+          </button>
 
           {/* Swiper Container */}
           <Swiper
@@ -103,18 +101,16 @@ const Section2 = () => {
           >
             {videos.map((videoUrl, index) => (
               <SwiperSlide key={index}>
-                <div className=" w-[90vw] md:w-[23vw] md:h-[80vh]  mx-auto rounded-xl overflow-hidden shadow-lg">
+                <div className=" w-[90vw] md:w-[23vw] md:h-[87vh]  mx-auto rounded-xl overflow-hidden shadow-lg">
                   {/* 9:16 Aspect Ratio for vertical videos */}
                   <div className="relative w-full" style={{ paddingTop: '177.78%' }}>
-                    <iframe
+                    <video
                       src={videoUrl}
-                      title={`video-${index}`}
-                      className="absolute inset-0 w-full h-full rounded-xl"
-                      frameBorder="0"
-                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;
-                      allowFullScreen"
-                      loading="lazy"
-                      
+                      controls
+                      playsInline
+                     
+                      className="absolute inset-0 w-full h-full object-cover"
+                      preload="metadata"
                     />
                   </div>
                 </div>
@@ -123,7 +119,7 @@ const Section2 = () => {
           </Swiper>
 
           {/* Helper Text */}
-          
+
         </div>
       </div>
     </div>
