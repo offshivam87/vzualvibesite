@@ -51,7 +51,7 @@ const Section2 = () => {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className='text-white text-center mt-[7rem] md:text-6xl text-4xl font-poppins-bold mb-10'
       >
-        Ai Videos
+        Transitional Edits
       </motion.p>
 
       <div className="mx-auto max-w-7xl px-4">
