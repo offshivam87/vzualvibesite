@@ -178,7 +178,7 @@ const Form = () => {
                             <input
                                 id="phone"
                                 type="tel"
-                                placeholder="9876543210"
+                                placeholder="8853106016"
                                 inputMode="numeric"
                                 className={`w-full bg-[#0a0a0a] border 
     ${errors.phone ? "border-red-500/50" : "border-[#27272a] hover:border-[#3f3f46]"} 

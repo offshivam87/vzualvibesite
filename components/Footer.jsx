@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Linkedin, Youtube, Mail, MapPin, Phone, X } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -37,10 +38,11 @@ const Footer = () => {
                     <div className="md:col-span-3 lg:col-span-2 lg:col-start-7">
                         <h4 className="text-white font-semibold mb-6 uppercase text-[0.85rem] tracking-wider">Navigation</h4>
                         <ul className="space-y-3">
-                            <li><a href="#work" className="text-[#a1a1aa] hover:text-[#fbc02d] text-sm transition-colors duration-300 inline-block">Work</a></li>
-                            <li><a href="#services" className="text-[#a1a1aa] hover:text-[#fbc02d] text-sm transition-colors duration-300 inline-block">Services</a></li>
-                            <li><a href="#about" className="text-[#a1a1aa] hover:text-[#fbc02d] text-sm transition-colors duration-300 inline-block">About Us</a></li>
-                            <li><a href="#contact" className="text-[#a1a1aa] hover:text-[#fbc02d] text-sm transition-colors duration-300 inline-block">Contact</a></li>
+                            <li><Link href="/home" className="text-[#a1a1aa] hover:text-[#fbc02d] text-sm transition-colors duration-300 inline-block">Home</Link></li>
+                            <li><Link href="/portfolio" className="text-[#a1a1aa] hover:text-[#fbc02d] text-sm transition-colors duration-300 inline-block">Portfolio</Link></li>
+                            <li><Link href="/services" className="text-[#a1a1aa] hover:text-[#fbc02d] text-sm transition-colors duration-300 inline-block">Services</Link></li>
+                            <li><Link href="/about" className="text-[#a1a1aa] hover:text-[#fbc02d] text-sm transition-colors duration-300 inline-block">About Us</Link></li>
+                            <li><Link href="/contact" className="text-[#a1a1aa] hover:text-[#fbc02d] text-sm transition-colors duration-300 inline-block">Contact</Link></li>
                         </ul>
                     </div>
 
@@ -75,10 +77,7 @@ const Footer = () => {
                     <p className="text-[#666] text-[0.8rem]">
                         &copy; {currentYear} VzualVibe. All rights reserved.
                     </p>
-                    <div className="flex gap-6 text-[#666] text-[0.8rem]">
-                        <a href="#" className="hover:text-[#a1a1aa] transition-colors duration-300">Privacy Policy</a>
-                        <a href="#" className="hover:text-[#a1a1aa] transition-colors duration-300">Terms of Service</a>
-                    </div>
+
                 </div>
             </div>
         </footer>

@@ -2,7 +2,7 @@ import React from 'react'
 import { NumberTicker } from '@/components/ui/number-ticker'
 
 const stats = [
-    { value: 350, suffix: "+", label: "Videos Edited" },
+    { value: 500, suffix: "+", label: "Videos Edited" },
     { value: 98, suffix: "%", label: "Client Satisfaction" },
     { value: 50, suffix: "+", label: "Projects Delivered" },
     { value: 3, suffix: "+", label: "Years of Experience" }

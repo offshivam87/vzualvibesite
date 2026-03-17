@@ -107,8 +107,8 @@ export default function Navbar() {
                 {/* Mobile Dropdown Menu */}
                 <div
                     className={`absolute z-50 top-full left-0 right-0 mt-3 rounded-2xl overflow-hidden transition-all duration-400 ease-out md:hidden ${mobileOpen
-                            ? "opacity-100 translate-y-0 pointer-events-auto"
-                            : "opacity-0 -translate-y-3 pointer-events-none"
+                        ? "opacity-100 translate-y-0 pointer-events-auto"
+                        : "opacity-0 -translate-y-3 pointer-events-none"
                         }`}
                     style={{
                         background:
@@ -123,13 +123,13 @@ export default function Navbar() {
                     <ul className="flex flex-col py-3">
                         {navLinks.map((link) => (
                             <li key={link.label}>
-                                <a
+                                <Link
                                     href={link.href}
                                     onClick={() => setMobileOpen(false)}
                                     className="block px-6 py-3 text-white/70 text-sm font-medium tracking-wide uppercase transition-all duration-300 hover:text-white hover:bg-white/5 hover:pl-8"
                                 >
                                     {link.label}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
