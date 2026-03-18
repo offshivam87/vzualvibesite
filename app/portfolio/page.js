@@ -2,9 +2,9 @@ import React from 'react'
 import PortfolioClient from './PortfolioClient'
 
 export const metadata = {
-    title: 'Our Work | Portfolio - Video & Web Projects in Gorakhpur',
+    title: 'Portfolio | Video & Web Projects in Gorakhpur',
     description: 'Explore VzualVibe\'s portfolio featuring premium video editing projects and high-performance websites delivered in Gorakhpur and beyond. See how we help brands grow with creative visuals.',
-    keywords: 'VzualVibe Portfolio, Video Editing Samples Gorakhpur, Web Development Projects India, Best Creative Work Gorakhpur, Cinematic Video Portfolio, Next.js Website Showcase',
+    keywords: 'VzualVibe Portfolio, Video Editing Gorakhpur, Web Development Gorakhpur, website development gorakhpur, Cinematic Video Portfolio, Next.js Website Showcase , video editing services gorakhpur, web development services gorakhpur, best video editor in gorakhpur, best website developer in gorakhpur',
     alternates: {
         canonical: 'https://vzualvibe.in/portfolio',
     },
