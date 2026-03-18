@@ -20,11 +20,15 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://vzualvibe.in"),
+  verification: {
+    google: "dcNyvJYI48JBQUeXM6qsnDUqUdSLYdkBOtktM4fhpaM"
+  }
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
       <body
         className={`${inter.className} antialiased`}
       >
