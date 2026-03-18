@@ -15,7 +15,7 @@ export const metadata = {
         siteName: 'VzualVibe',
         images: [
             {
-                url: '../public/images/logo.jpg',
+                url: '/images/banner.png',
                 width: 1200,
                 height: 630,
                 alt: 'Contact VzualVibe Gorakhpur',
@@ -28,7 +28,7 @@ export const metadata = {
         card: 'summary_large_image',
         title: 'Contact VzualVibe | Gorakhpur\'s Digital Experts',
         description: 'Get world-class editing and web services in Taramandal, Gorakhpur.',
-        images: ['../public/images/logo.jpg'],
+        images: ['/images/banner.png'],
     },
 }
 

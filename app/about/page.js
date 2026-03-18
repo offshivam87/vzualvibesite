@@ -2,7 +2,7 @@ import React from 'react'
 import AboutClient from './AboutClient'
 
 export const metadata = {
-    title: 'About VzualVibe | Top Video Editors & Web Developers in Gorakhpur',
+    title: 'About | Best Video Editing & Web Development Services in Gorakhpur',
     description: 'VzualVibe is Gorakhpur\'s leading creative agency. We specialize in cinematic video editing and modern web development for businesses in Gorakhpur and across Uttar Pradesh. Meet the team driving digital growth in Purvanchal.',
     keywords: 'About VzualVibe, Video Editing Agency Gorakhpur, Best Web Developers in Gorakhpur, Creative Studio Gorakhpur, VzualVibe Team, Professional Editing Gorakhpur UP, Website Design Gorakhpur',
     alternates: {
@@ -15,7 +15,7 @@ export const metadata = {
         siteName: 'VzualVibe',
         images: [
             {
-                url: '/images/logo.jpg',
+                url: '/images/banner.png',
                 width: 1200,
                 height: 630,
                 alt: 'VzualVibe Team Gorakhpur',
@@ -28,7 +28,7 @@ export const metadata = {
         card: 'summary_large_image',
         title: 'About VzualVibe | Gorakhpur\'s Creative Experts',
         description: 'Leading the way in Video & Web services in Gorakhpur, UP.',
-        images: ['/images/logo.jpg'],
+        images: ['/images/banner.png'],
     },
 }
 

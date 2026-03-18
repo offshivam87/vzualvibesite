@@ -9,13 +9,13 @@ export const metadata = {
         canonical: 'https://vzualvibe.in/services',
     },
     openGraph: {
-        title: 'VzualVibe Services - Video Production & Digital Solutions',
+        title: 'Services - Video Editing & Web Development Solutions',
         description: 'From high-end video post-production to custom coding, we provide top-tier digital services in Gorakhpur.',
         url: 'https://vzualvibe.in/services',
         siteName: 'VzualVibe',
         images: [
             {
-                url: '../public/images/logo.jpg',
+                url: '/images/banner.png',
                 width: 1200,
                 height: 630,
                 alt: 'VzualVibe Video and Web Services',
@@ -28,7 +28,7 @@ export const metadata = {
         card: 'summary_large_image',
         title: 'VzualVibe | Premium Digital Services in Gorakhpur',
         description: 'Professional Editing and Modern Web Dev under one roof.',
-        images: ['../public/images/logo.jpg'],
+        images: ['/images/banner.png'],
     },
 }
 
