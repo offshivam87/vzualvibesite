@@ -1,45 +1,23 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
+/* ❌ REMOVE DARK VARIANT SYSTEM COMPLETELY */
 
+/* ================= FIXED COLORS ================= */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --animate-blink-cursor: blink-cursor 1.2s step-end infinite;
+/* ❌ REMOVE THIS (important) */
+/* @media (prefers-color-scheme: dark) { ... } */
 
-  @keyframes blink-cursor {
-
-    0%,
-    49% {
-      opacity: 1;
-    }
-
-    50%,
-    100% {
-      opacity: 0;
-    }
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ================= GLOBAL ================= */
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #0a0a0a;
+  color: #ffffff;
 }
 
+/* ================= ANIMATIONS ================= */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -52,15 +30,16 @@ body {
   }
 }
 
-/* ───────────────────────────────────────────────
-   VIDEO SLIDER — SIMPLE
-   ─────────────────────────────────────────────── */
+/* ================= VIDEO SLIDER ================= */
 
 .video-slider-section {
   position: relative;
   width: 100%;
   padding: 4rem 0 5rem;
-  background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+
+  /* ALWAYS DARK */
+  background: #0a0a0a;
+
   overflow: hidden;
 }
 
@@ -85,31 +64,31 @@ body {
 .video-slider-heading {
   font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 700;
-  color: #fff;
+
+  /* ALWAYS WHITE */
+  color: #ffffff;
 }
 
 .video-slider-heading--accent {
   background: linear-gradient(135deg, #f5a623, #f7dc6f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
-/* ── VIDEO CARD ── */
+/* ================= VIDEO CARD ================= */
 
 .vcard {
   position: relative;
   width: 90%;
   aspect-ratio: 9 / 16;
-
-  /* desktop me proper shorts width */
   max-width: 450px;
-
   margin: 0 auto;
   border-radius: 1rem;
   overflow: hidden;
 
   border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111;
+  /* slight card contrast */
 }
 
 .vcard__video {
@@ -118,7 +97,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .vcard__click-area {
@@ -128,9 +106,7 @@ body {
   cursor: pointer;
 }
 
-
-
-/* play / pause btn */
+/* play button */
 .vcard__btn {
   position: absolute;
   bottom: 1rem;
@@ -140,13 +116,14 @@ body {
   height: 40px;
   border-radius: 50%;
   border: none;
-  background: rgba(0, 0, 0, 0.55);
+
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
+
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
 .vcard__btn:hover {
@@ -157,14 +134,15 @@ body {
   position: absolute;
   bottom: 1.1rem;
   left: 1rem;
-  color: #fff;
+
+  color: #ffffff;
+
   font-size: 0.9rem;
   font-weight: 600;
   z-index: 4;
-  pointer-events: none;
 }
 
-/* ── SWIPER ── */
+/* ================= SWIPER ================= */
 
 .video-swiper {
   padding-bottom: 3.5rem !important;
@@ -173,7 +151,9 @@ body {
 .video-swiper .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
+
   background: rgba(255, 255, 255, 0.25);
+
   opacity: 1;
   transition: all 0.3s;
 }
@@ -190,10 +170,11 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 50%;
+
   background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.25s;
+
+  backdrop-filter: blur(6px);
 }
 
 .video-swiper .swiper-button-prev:hover,
@@ -209,15 +190,12 @@ body {
   color: #ea8b06;
 }
 
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
   .video-swiper .swiper-button-prev,
   .video-swiper .swiper-button-next {
     display: none;
-  }
-
-  .vcard {
-    max-height: none;
   }
 }

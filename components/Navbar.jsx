@@ -75,10 +75,18 @@ export default function Navbar() {
                         <li key={link.label}>
                             <Link
                                 href={link.href}
-                                className="relative text-white text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-white group"
+                                className={`relative text-sm font-medium tracking-wide uppercase transition-all duration-300 group
+      ${link.label === "Contact"
+                                        ? "px-5 py-2 rounded-full bg-amber-500 text-black hover:bg-amber-400 shadow-[0_0_15px_rgba(234,139,6,0.4)]"
+                                        : "text-white hover:text-white"
+                                    }`}
                             >
                                 {link.label}
-                                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-amber-400 rounded-full transition-all duration-300 group-hover:w-full shadow-[0_0_8px_rgba(234,139,6,0.6)]" />
+
+                                {/* underline only for normal links */}
+                                {link.label !== "Contact" && (
+                                    <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-amber-400 rounded-full transition-all duration-300 group-hover:w-full shadow-[0_0_8px_rgba(234,139,6,0.6)]" />
+                                )}
                             </Link>
                         </li>
                     ))}
@@ -122,15 +130,17 @@ export default function Navbar() {
                 >
                     <ul className="flex flex-col py-3">
                         {navLinks.map((link) => (
-                            <li key={link.label}>
-                                <Link
-                                    href={link.href}
-                                    onClick={() => setMobileOpen(false)}
-                                    className="block px-6 py-3 text-white/70 text-sm font-medium tracking-wide uppercase transition-all duration-300 hover:text-white hover:bg-white/5 hover:pl-8"
-                                >
-                                    {link.label}
-                                </Link>
-                            </li>
+                            <Link
+                                href={link.href}
+                                onClick={() => setMobileOpen(false)}
+                                className={`block text-sm font-medium tracking-wide uppercase transition-all duration-300
+    ${link.label === "Contact"
+                                        ? "mx-4 my-2 px-5 py-3 rounded-full bg-amber-500 text-black text-center shadow-[0_0_20px_rgba(234,139,6,0.4)]"
+                                        : "px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 hover:pl-8"
+                                    }`}
+                            >
+                                {link.label}
+                            </Link>
                         ))}
                     </ul>
                 </div>

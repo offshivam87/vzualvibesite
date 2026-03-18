@@ -63,7 +63,7 @@ export default function Home() {
         }
     ]
     return (
-        <>
+        <div className="">
             <main className="relative h-svh max-h-[700px] md:h-screen md:max-h-none bg-black overflow-hidden">
 
                 {/* Floating Lines Background — dimmed for text readability */}
@@ -219,6 +219,6 @@ export default function Home() {
             {/* footer */}
             <Footer />
 
-        </>
+        </div>
     )
 }

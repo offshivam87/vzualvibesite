@@ -120,7 +120,7 @@ const VideoSlider = ({ videos }) => {
     }, [])
 
     return (
-        <section>
+        <section className="bg-black">
 
 
             <Swiper
