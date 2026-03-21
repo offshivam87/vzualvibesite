@@ -10,7 +10,7 @@ const stats = [
 
 const NumberCounting = () => {
     return (
-        <section className="w-full py-20 bg-transparent flex justify-center items-center">
+        <section className="w-full py-20 text-amber-400 bg-transparent flex justify-center items-center">
             <div className="container max-w-6xl mx-auto px-4 sm:px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                     {stats.map((stat, index) => (

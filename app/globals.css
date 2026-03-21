@@ -30,6 +30,22 @@ body {
   }
 }
 
+/* marquee animation */
+.logo-img {
+  width: 120px;
+  height: auto;
+  /* Sabse pehle logo ko grey karne ke liye */
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+  /* Hover karne par original color dikhane ke liye */
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
 /* ================= VIDEO SLIDER ================= */
 
 .video-slider-section {
@@ -197,5 +213,195 @@ body {
   .video-swiper .swiper-button-prev,
   .video-swiper .swiper-button-next {
     display: none;
+  }
+}
+
+/* ================= MARQUEE SECTION ================= */
+
+.marquee-section {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0 6rem;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+/* ---- header ---- */
+.marquee-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
+}
+
+.marquee-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  color: rgba(234, 139, 6, 0.85);
+  border: 1px solid rgba(234, 139, 6, 0.3);
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.marquee-heading {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.marquee-heading--accent {
+  background: linear-gradient(135deg, #f5a623, #f7dc6f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marquee-subheading {
+  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  max-width: 500px;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+/* ---- rows container ---- */
+.marquee-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ---- single row ---- */
+.marquee-row {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* edge fade masks */
+  -webkit-mask-image: linear-gradient(90deg,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%);
+  mask-image: linear-gradient(90deg,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%);
+}
+
+/* ---- track (the scrolling strip) ---- */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  animation: marquee-scroll var(--marquee-speed, 30s) linear infinite;
+}
+
+.marquee-reverse {
+  animation-name: marquee-scroll-reverse;
+}
+
+/* pause on hover for a refined touch */
+.marquee-row:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ---- card ---- */
+.marquee-card {
+  flex-shrink: 0;
+  width: 200px;
+  height: 180px;
+}
+
+.marquee-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.85rem;
+  overflow: hidden;
+
+  background: #111;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s ease;
+}
+
+.marquee-card-inner:hover {
+  transform: scale(1.04);
+  border-color: rgba(234, 139, 6, 0.35);
+}
+
+.marquee-card-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.marquee-card-inner:hover img {
+  transform: scale(1.08);
+}
+
+/* amber glow overlay on hover */
+.marquee-card-glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: linear-gradient(135deg,
+      rgba(234, 139, 6, 0.15) 0%,
+      transparent 60%);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.marquee-card-inner:hover .marquee-card-glow {
+  opacity: 1;
+}
+
+/* ---- keyframes ---- */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ---- responsive ---- */
+@media (max-width: 768px) {
+  .marquee-section {
+    padding: 1rem 0 1.5rem;
+  }
+
+  .marquee-card {
+    width: 100px;
+    height: 90px;
+  }
+
+  .logo-img {
+    width: 70px;
+  }
+
+  .marquee-track {
+    gap: 0.2rem;
+  }
+
+  .marquee-rows {
+    gap: 0.5rem;
   }
 }

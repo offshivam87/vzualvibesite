@@ -12,6 +12,7 @@ import Footer from "@/components/Footer"
 import NumberCounting from "./NumberCounting"
 import { AccordionDemo } from "./Accordion"
 import dynamic from "next/dynamic"
+import MarqueeAnimation from "./MarqueeANimation"
 
 import VideoSlider from "./VideoSlider"
 
@@ -23,10 +24,10 @@ export default function Home() {
     const videos = [
         {
             id: 1,
-            title: "Motion Graphics",
-
-            src: "https://res.cloudinary.com/dlsxtmkaq/video/upload/f_auto,q_auto/global_cell_wp51pg.mp4",
+            title: "Talking Head 2",
+            src: "https://res.cloudinary.com/dlsxtmkaq/video/upload/v1773472531/WhatsApp_Video_2026-03-14_at_12.44.34_PM_fmmmby.mp4",
         },
+
         {
             id: 2,
             title: "AI Video",
@@ -53,9 +54,11 @@ export default function Home() {
         },
         {
             id: 6,
-            title: "Talking Head",
-            src: "https://res.cloudinary.com/dlsxtmkaq/video/upload/v1773472531/WhatsApp_Video_2026-03-14_at_12.44.34_PM_fmmmby.mp4",
+            title: "Motion Graphics",
+
+            src: "https://res.cloudinary.com/dlsxtmkaq/video/upload/f_auto,q_auto/global_cell_wp51pg.mp4",
         },
+
         {
             id: 7,
             title: "Faceless Motion Graphics",
@@ -64,10 +67,10 @@ export default function Home() {
     ]
     return (
         <div className="">
-            <main className="relative h-svh max-h-[700px] md:h-screen md:max-h-none bg-black overflow-hidden">
+            <main className="relative h-svh max-h-[600px] mt-12  md:h-screen md:max-h-none bg-black overflow-hidden">
 
                 {/* Floating Lines Background — dimmed for text readability */}
-                <div className="absolute inset-0 opacity-80">
+                <div className="absolute inset-0 opacity-60">
                     <div className="absolute inset-0">
                         <FloatingLines
                             linesGradient={["#ea8b06", "#f5e747"]}
@@ -107,7 +110,14 @@ export default function Home() {
 
                     {/* Centered Hero Content */}
                     <div className="flex-1 flex flex-col items-center justify-start pt-25 sm:pt-20 md:justify-center md:pt-10  text-center px-5 sm:px-6 opacity-0 animate-[fadeUp_1s_ease-out_0.3s_forwards]">
-                        <h1 className="pb-3 text-[0.8rem]">FRAME • PIXEL • PERFORM</h1>
+                        <div class="flex my-2 items-center gap-2 px-4 py-2 border border-white/10 rounded-full bg-white/5 w-fit">
+                            <span class="relative flex h-3 w-3">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                            </span>
+
+                            <span class="text-gray-300 text-sm font-medium">Creative Agency in Gorakhpur</span>
+                        </div>
                         <h1 className="text-white text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight leading-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.8)]">
                             Don’t Just Exist Online.
                             <span className="block font-semibold bg-linear-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent drop-shadow-none">
@@ -169,6 +179,8 @@ export default function Home() {
 
                 </div>
             </main>
+            {/* Client work marquee */}
+            <MarqueeAnimation />
 
 
             {/* Video Carousel */}
