@@ -47,7 +47,7 @@ const MarqueeRow = ({ reverse = false, speed = 80 }) => {
 
 const MarqueeAnimation = () => {
     return (
-        <section className="marquee-section">
+        <section className="marquee-section my-3 md:mb-1">
             {/* Section heading */}
             {/* <motion.div
                 initial={{ opacity: 0, y: 30 }}

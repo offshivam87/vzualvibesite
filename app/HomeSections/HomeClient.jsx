@@ -67,7 +67,7 @@ export default function Home() {
     ]
     return (
         <div className="">
-            <main className="relative h-svh max-h-[600px] mt-12  md:h-screen md:max-h-none bg-black overflow-hidden">
+            <main className="relative h-svh max-h-[580px] mt-12  md:h-screen md:max-h-none bg-black overflow-hidden">
 
                 {/* Floating Lines Background — dimmed for text readability */}
                 <div className="absolute inset-0 opacity-60">
@@ -145,7 +145,7 @@ export default function Home() {
                                 Get In Touch
                             </a>
                         </div>
-                        <div className="my-3">
+                        <div className="mt-10  ">
                             <motion.div
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -167,7 +167,7 @@ export default function Home() {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ duration: 0.5, delay: 0.2 }}
-                                    className="txt  w-[35vw] md:w-[25vw] text-[0.7rem] md:text-[1.3rem] my-auto text-center text-white font-poppins md:pr- pr-6"
+                                    className="txt  w-[35vw] md:w-[25vw]  text-[0.7rem] md:text-[1.3rem] my-auto text-center text-white font-poppins md:pr- pr-6"
                                 >
                                     40+ Happy Clients
                                 </motion.div>
